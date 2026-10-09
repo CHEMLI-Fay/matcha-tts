@@ -12,7 +12,7 @@ from model import MatchaTTS
 # ----------------------------------------------------------------------------------------------------------------------
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 # CHECKPOINT_PATH = "matcha_ljspeech.ckpt"
-CHECKPOINT_PATH = "/home/lounes/tts/matcha-tts/lightning_logs/matcha_tts/version_29/checkpoints/last.ckpt"
+CHECKPOINT_PATH = os.environ.get("MATCHA_CHECKPOINT_PATH", "matcha_ljspeech.ckpt")
 VOCODER_URL = "https://github.com/shivammehta25/Matcha-TTS-checkpoints/releases/download/v1.0/generator_v1"
 VOCODER_PATH = "generator_v1"
 
